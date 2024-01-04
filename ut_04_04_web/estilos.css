@@ -1,0 +1,514 @@
+/************************************************GRID DE TODA LA PÁGINA***********************************************************************/
+.contenedor{
+    /*Coge todo el espacio*/
+    width: 100%;
+    /*Maquetar - GRID GENERAL*/
+    display: grid;
+    /*Espacio entre bordes*/
+    grid-gap: 2%;
+    /*Definimos las columnas*/ 
+    grid-template-columns: repeat(4, 1fr); 
+    /*Definimos filas*/
+    grid-template-rows: repeat(4, auto); 
+    /*Margen inferior*/
+    margin-bottom: 5%;
+    /*Margen derecha*/
+    margin-right: 2%;
+}
+
+/*Todo los espacios*/
+.contenedor header,
+.contenedor .cuadro,
+.contenedor aside,
+.contenedor footer{
+    /*Color del fondo*/
+    background-color:rgb(223, 223, 223);
+    /*Bordes redondeados*/
+    border-radius: 1vh;
+}
+
+.contenedor header{
+    /*GRID GENERAL*/
+    grid-column-start: 1;/*Coge la columna de donde empieza, en este caso en el 1º*/
+    grid-column-end: 5; /*Coge la columna de donde acaba, en este caso el 5*/
+    grid-row-start: 1; /*Coge la fila donde empieza, en este caso el 1*/
+    grid-row-end: 2; /*Coge la fila donde acaba, en este caso el 2*/
+    
+    /*Borde recto (solid)*/
+    border: 0.5vh solid black;
+
+    /*Altura en VH para que sea proporcional al tamaño*/
+    height: 20vh;
+
+    /************************************************GRID ESPECÍFICOS********************************************************************************/
+    display:grid;
+    column-gap: 2%;
+    /*Divide en 3 columnas*/
+    grid-template-columns: 30% 30% 30%;
+    /*Solo tiene una fila*/
+    grid-template-rows: 100%;
+    /*Se divide el área en 3 columnas y 1 fila, se asigna letra que luego definimos que va en cada lugar que ocupa dichas letras*/
+    grid-template-areas:"a b c";
+    width: 100%;
+}
+
+.contenedor aside{
+    border: 0.5vh solid rgb(0, 0, 0);
+    /*GRID GENERAL*/
+    grid-column: 1 / 5;/*La columan coge desde la 1 hasta la 5*/
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    /*Usamos (display, align-items, text-align y justify-content) para centrar el contenido junto con los center de abajo*/
+    display: flex;  
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.contenedor .contenidoPrincipal{
+    /*Ocupa  las 4 columnas*/
+    grid-column: span 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: 100%;
+}
+
+.contenedor footer{
+    /* grid-area:zona_footer; */
+    border: 0.5vh solid black;
+    grid-column: span 4; 
+    grid-row-start: 4;
+    grid-row-end: 5;
+    height: 10vh;
+}
+
+/************************************************GRID ESPECÍFICOS********************************************************************************/
+.contenedor header .foto {
+    /*Grid para ordenar los elementos dentro del header*/
+    grid-area: a;
+    /* Alineación vertical */
+    align-self:center;
+    height: 75%;
+    margin-left: 3%;
+}
+
+.contenedor header .modelo {
+    grid-area: b;
+    align-self: center;
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+
+.contenedor header .empresa {
+    grid-area: c;
+    align-self: center;
+    color:rgb(0, 0, 0);
+    text-align: right;
+}
+
+.contenedor .contenidoPrincipal section .gridFiltro2{
+    /*GRID ESPECÍFICO*/
+    display:grid;
+    column-gap: 2%;
+    /*Divide en 3 columnas*/
+    grid-template-columns: 30% 30% 30%;
+    /*Tiene 2 fila*/
+    grid-template-rows: 50% 50%;
+    /*Se divide el área en 3 columnas y 1 fila, se asigna letra que luego definimos que va en cada lugar que ocupa dichas letras*/
+    grid-template-areas:"vb vb vb"
+                        "g h i";
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+.imagenfuente1{
+    grid-area: g;
+    align-self: center;
+    text-align: center;
+}
+
+.imagenfuente2{
+    grid-area: h;
+    align-self: center;
+    text-align: center;
+}
+
+.imagenfuente3{
+    grid-area: i;
+    align-self: center;
+    text-align: center;
+}
+
+.centrarLetras3{
+    grid-area: vb;
+    margin-left: 75vh;
+    font-size: xx-large;
+}
+
+.contenedor .contenidoPrincipal section .gridFiltro3{
+    /*GRID ESPECÍFICO*/
+    display:grid;
+    column-gap: 2%;
+    /*Divide en 2 columnas*/
+    grid-template-columns: 50% 50%;
+    /*Tiene 1 fila*/
+    grid-template-rows: 100%;
+    /*Se divide el área en 3 columnas y 1 fila, se asigna letra que luego definimos que va en cada lugar que ocupa dichas letras*/
+    grid-template-areas:"xz zx";
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+.newgrid5{
+    grid-area: xz;
+    align-self: center;
+    margin-left: 30vh;
+}
+
+.newgrid6{
+    grid-area: zx;
+    align-self: center;
+    margin-left: -5vh;
+}
+
+/************************************************LISTA EN HORIZONTAL********************************************************************************/
+.ponerEnLinea1 {
+    list-style-type: none;   /*Quitamos el símbolo de la lista*/
+}
+
+.ponerEnLinea2 {
+    display: inline;  /*Ponemos en línea la lista*/
+    margin-right: 10vh;  /*Separación entre las palabras de la lista */
+}
+
+/************************************************ENLACES*****************************************************************************************/
+/*Se mantenga cuando se pulse los iconos de la barra de navegación el color negro aunque se visite*/
+a, a:visited { 
+    color: black;
+}
+
+/*Cuando se pulse los iconos de la barra de navegación se pinte del color verde*/
+a:active{
+    color: green;
+}
+
+/************************************************OCULTAR Y MOSTRAR SECCIÓN********************************************************************************/
+/*Ocultar contenido hasta que pulsemos los enlaces, ponemos input para ocultar el redondel del checked*/
+.ocultar, input {
+    display: none;
+}
+
+/*Cuando pulsemos los enlaces, como hemos elegido checked aparecerá el contenido, hemos puesto un nombre diferente a cada enlace para que el resto permanezcan oculto*/
+#imagen:checked + .ocultar, #audio:checked + .ocultar, #video:checked + .ocultar {
+    display: block;  /*Aparezca contenido*/
+    margin-left: 10%;
+}
+
+/************************************************EFECTOS IMÁGENES********************************************************************************/
+.imagenfuente{
+    /*Tamaño de imágenes*/
+    width: 50vh;
+    height: 30vh;
+}
+
+.centrarImagen{
+    margin-left: 35vh;
+    margin-bottom: 2vh;
+}
+
+/************************************************GRID ESPECÍFICOS + FILTROS********************************************************************************/
+.contenedor .contenidoPrincipal section .gridFiltro{
+    /*GRID ESPECÍFICO*/
+    display:grid;
+    column-gap: 2%;
+    /*Divide en 3 columnas*/
+    grid-template-columns: 30% 30% 30%;
+    /*Tiene 3 fila*/
+    grid-template-rows: 30% 30% 30%;
+    /*Se divide el área en 3 columnas y 1 fila, se asigna letra que luego definimos que va en cada lugar que ocupa dichas letras*/
+    grid-template-areas:"l l l"
+                        "x y z"
+                        "d e f";
+    width: 100%;
+}
+
+.imagen7{
+    grid-area: x;
+    align-self: center;
+    text-align: center;
+}
+
+.filtro1{
+    filter: sepia(100%);
+    grid-area: y;
+    align-self: center;
+    text-align: center;
+}
+
+.filtro2{
+    filter: drop-shadow(1vh 1vh 1vh rgb(255, 0, 255)) invert(100%);
+    grid-area: z;
+    align-self: center;
+    text-align: center;
+}
+
+/************************************************ALREDEDOR DE LAS IMÁGENES********************************************************************************/
+/*Cuadro que rodea imagen*/
+.cuadro{
+    border: 0.5vh solid black;
+    padding-left: 15vh;
+    margin-left: -20vh;
+    margin-top: 2vh;
+}
+
+/************************************************LETREROS IMÁGENES********************************************************************************/
+.centrarLista1{
+    margin-left: 40vh;
+}
+
+.centrarLista2{
+    margin-left: 5vh;
+}
+
+.centrarLetras1{
+    margin-left: 79vh;
+    font-size: xx-large;
+}
+
+.centrarLetras2{
+    grid-area: l;
+    margin-left: 70vh;
+    font-size: xx-large;
+}
+
+.centrarLetras4{
+    margin-left: 75vh;
+    margin-bottom: 3vh;
+    font-size: xx-large;
+}
+
+.espacioFiltro{
+    grid-area: d;
+}
+
+.espacioFiltro2{
+    grid-area: e;
+}
+
+.espacioFiltro3{
+    grid-area: f;
+}
+
+.pie{
+    text-align: center;
+}
+
+/************************************************TABLA***********************************************************************************/
+.colorear {
+    border: 0.5vh solid green;
+}
+
+.colorear2 {
+    color: rgb(124, 0, 128);
+    
+}
+
+table{
+    margin-left: 60vh;
+}
+
+.tituliti:hover{
+    background-color: rgb(124, 255, 152);
+    font-family: 'Raleway', sans-serif;
+}
+
+/************************************************VIDEO - BOTONES*********************************************************************************/
+#myVideo{
+    width: 45%;
+    height: 100%;
+    margin-left: 40vh;
+}
+
+.blue{
+    background-color: aqua;
+    width: 20vh;
+    margin-left: 60vh;
+    font-size: large;
+}
+
+.red{
+    background-color: red;
+    width: 20vh;
+    font-size: large;
+    margin-left: 1vh;
+}
+
+.blue:active{
+    background-color: rgb(0, 105, 79);
+}
+
+.red:active{
+    background-color: rgb(222, 255, 145);
+}
+
+.datos{
+    border-radius: 2vh;
+    border: 1vh double lightgreen;
+    width: 60vh;
+    margin-top: 5vh;
+    margin-left: 50vh;
+    padding-left: 2vh;
+}
+
+@font-face {
+    font-family:"mi_fuente";
+    src: url("../League_Gothic/LeagueGothic-Regular-VariableFont_wdth.ttf");
+}
+
+.datos:hover{
+    background-color: rgb(81, 255, 0);
+    font-family: "mi_fuente";
+    font-size: 3vh;
+}
+
+h2::first-letter{ /*PRIMERA LETRA o LÍNEA de un PÁRRAFO*/
+    text-transform: uppercase;
+}
+
+.solitario{
+    background-color: rgb(81, 255, 0);
+}
+
+/************************************************RESPONSIVE******************************************************************************/
+
+@media screen and (max-width:780px) {
+
+/************************************************OCULTAR SECCIONES***********************************************************************/
+
+#imagen:checked + .ocultar, #audio:checked + .ocultar, #video:checked + .ocultar {
+    display: block;  /*Aparezca contenido*/
+    /*Para centrarlo un poco pero esté más arriba*/
+    margin-top: 1%;  
+    margin-left: 20vh;
+    margin-right: -70vh;
+}
+
+/************************************************IMÁGENES***********************************************************************/
+.imagenfuente{
+    /*Tamaño de imágenes*/
+    width: 20vh;
+    height: 10vh;
+    /*Separación entre imágenes*/
+    margin-left: -8vh;
+}
+
+.imagenfuente1, .imagenfuente2, .imagenfuente3 {
+    margin-bottom: 3vh;
+}
+
+.centrarImagen{
+    margin-left: -1vh;
+}
+
+/************************************************LETREROS IMÁGENES***********************************************************************/
+.centrarLista1{
+    margin-left: 5vh;
+}
+
+.centrarLetras1{
+    margin-left: 15vh;
+    font-size: x-large;
+}
+
+ .centrarLetras2{
+    margin-left: 1vh;
+    margin-bottom: 1vh;
+    font-size: x-large;
+} 
+
+.centrarLetras3{
+    margin-left: 15vh;
+    margin-bottom: 1vh;
+    font-size: x-large;
+} 
+
+.centrarLetras4{
+    margin-left: 15vh;
+    margin-bottom: 1vh;
+    font-size: x-large;
+} 
+
+.espacioFiltro{
+    margin-left: -8vh;
+    margin-top: 4vh;
+}
+
+.espacioFiltro2{
+    margin-left: -8vh;
+    margin-top: 4vh;
+}
+
+.espacioFiltro3{
+    margin-left: -8vh;
+    margin-top: 4vh;
+}
+
+/************************************************ALREDEDOR DE LAS IMÁGENES********************************************************************************/
+.cuadro{
+    width: 68vh;
+    border: 0.5vh solid black;
+    padding-left: 13vh;
+}
+
+.gridFiltro2{
+    margin-top: 2vh;
+}
+
+.newgrid5{
+    margin-left: -2vh;
+}
+
+.newgrid6{
+    margin-left: -8vh;
+}
+
+/************************************************TABLA***********************************************************************/
+table{
+    margin-left: 1vh;
+}
+
+/************************************************VIDEO - BOTONES*********************************************************************************/
+#myVideo{
+    width: 45%;
+    height: 100%;
+    margin-left: -9vh;
+    margin-top: 3vh;
+}
+
+.blue{
+    background-color: aqua;
+    width: 10vh;
+    font-size: medium;
+    margin-left: 10vh;
+    margin-bottom: 10vh;
+}
+
+.red{
+    background-color: red;
+    width: 10vh;
+    font-size: medium;
+    margin-left: 1vh;
+}
+
+.datos{
+    margin-top: -7vh;
+    margin-left: -10vh;
+    padding-left: 2vh;
+}
+
+.aviso{
+    margin-top: -5vh;
+}
+
+}

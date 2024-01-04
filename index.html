@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title role="Pestaña">Lozano's Cars</title>
+    <!-- Hoja de estilo -->
+    <link rel="stylesheet" href="./ut_04_04_web/estilos.css" media="screen" role="Aplicar estilo">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./ut_04_01_img/favicon.ico" role="Aplicar icono en la pestaña">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/e0f3b21040.js"crossorigin="anonymous" role="Aplicar icono online"></script>
+    <!-- Fuente online google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" role="Aplicar fuente online">
+</head>
+<body> 
+
+    <div class="contenedor">
+
+        <header role="cabecera">
+            <abbr title="Descargado de la web del instituto">
+                <img class="foto" src="./ut_04_01_img/10_logo.svg" alt="foto" role="logo de la empresa">
+            </abbr>
+            <h1 class="modelo" role="modelo del coche">Lambo Urus</h1>
+            <h1 class="empresa" role="empresa">Lozano's Cars</h1>
+        </header>
+
+        <!-- Barra lateral -->
+        <aside role="barra de menú">
+            <ul class="centrarLista2 ponerEnLinea1">
+                <li class="ponerEnLinea2"><a href="#" ><label for="imagen" role="icono para entrar en zona de imagen"><i class="fa fa-picture-o fa-2x" aria-hidden="true"></i></label></a></li>
+                <li class="ponerEnLinea2"><a href="#" ><label for="audio" role="icono para entrar en zona de audio"><i class="fa fa-volume-up fa-2x" aria-hidden="true"></i></label></a></li>
+                <li class="ponerEnLinea2"><a href="#" ><label for="video" role="icono para entrar en zona de video"><i class="fa fa-video-camera fa-2x" aria-hidden="true"></i></label></a></li>
+            </ul>
+        </aside>
+
+        <!-- Cuerpo -->
+        <main class="contenidoPrincipal" role="cuerpo de la web">
+            <input type="radio" id="imagen" name="mostrarOcultar" checked>
+            <section class="ocultar" role="Muestra la zona de Imagen">
+                <article role="Imágenes fuentes">
+                    <div class="cuadro">
+                        <h1 class="centrarLetras3"><u>Imágenes fuentes</u></h1>
+                        <div class="gridFiltro2">
+                            <img src="./ut_04_01_img/01_imagen_1.xxx_.jpeg" alt="Imagen origen 1" class="imagenfuente1 imagenfuente">
+                            <img src="./ut_04_01_img/02_imagen_2.jpeg" alt="Imagen 2" class="imagenfuente2 imagenfuente">
+                            <img src="./ut_04_01_img/03_imagen_3.jpeg" alt="Imagen 3" class="imagenfuente3 imagenfuente">
+                        </div>
+                    </div>
+                </article>
+                <article role="Composición">
+                    <div class="cuadro">
+                        <h1 class="centrarLetras1"><u>Composición</u></h1>
+                        <div class="gridFiltro3">
+                            <img src="./ut_04_01_img/05_composición.jpg" alt="Imagen 5" class="imagenfuente newgrid5">
+                            <img src="./ut_04_01_img/06_composición.gif" alt="Imagen 6" class="imagenfuente newgrid6">
+
+                        </div>
+                    </div>
+                </article>
+                <article role="Composición mejorada y filtros CSS" >
+                    <div class="cuadro">
+                        <h1 class="centrarLetras2"><u>Composición mejorada y filtros CSS</u></h1>
+                        <div class="gridFiltro">
+                            <img src="./ut_04_01_img/07_composicion_mejorada.jpg" alt="Imagen 7 sin filtro" class="imagenfuente imagen7">
+                                <p class="espacioFiltro"><b>Sin filtro</b></p>
+                            <img src="./ut_04_01_img/07_composicion_mejorada.jpg" alt="Imagen 7 filtro1" class="imagenfuente filtro1">
+                                <p class="espacioFiltro2"><b>Filtro Sepia</b></p>
+                            <img src="./ut_04_01_img/07_composicion_mejorada.jpg" alt="Imagen 7 filtro2" class="imagenfuente filtro2">
+                                <p class="espacioFiltro3"><b>Filtro Drop-shadow e Invert</b></p>
+                        </div>
+                    </div>
+                </article>
+                <article role="Imagen responsiva">
+                    <div class="cuadro">
+                        <h1 class="centrarLetras4"><u>Imagen responsiva</u></h1>
+                        <div class="centrarImagen">
+                            <picture>
+                                <source media="(min-width: 800px)" srcset="./ut_04_01_img/08_composicion_dim_1000.jpg">
+                                <img src="./ut_04_01_img/09_composición_dim_500.jpg">
+                          </picture>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <input type="radio" id="audio" name="mostrarOcultar">
+            <section class="ocultar" role="Muestra la zona de Sonido">
+                <article >                  
+                    <table>   
+                        <thead>    <!--Cabecera-->
+                            <tr>    <!--Fila-->
+                                <th><!--Columnas-->
+                                    <b><h2 class="tituliti">Voodoo Suite - Little Grass Shack (8038.4KB)</h2></b>
+                                </th>    
+                            </tr>
+                        </thead>
+                        <tbody>    <!--Cuerpo-->
+                            <tr>    <!--Fila-->
+                                <td>
+                                    <abbr title="Buscado por Adrián Lozano Martínez"><audio controls preload="metadata" role="reproduce música">
+                                        <source src="./ut_04_02_audio/01_audio.mp3" type="audio/mpeg" role="reproduce uno u otro sonido">
+                                        <source src="./ut_04_02_audio/02_audio.ogg" type="audio/ogg" role="reproduce uno u otro sonido">
+                                    </audio></abbr>
+                                </td>
+                            </tr>
+                            <tr><td class="colorear"><b>01_video.mpeg - 16179.2KB / </b><b>02_video.ogg - 19968KB</b></td></tr>
+                        </tbody>
+                        <tfoot>     <!--Pie-->
+                            <tr>    <!--Fila-->
+                                <td><b>https://freemusicarchive.org/track/Little_Grass_Shack</b></td>    <!--Columnas-->
+                            </tr>  
+                            <tr><td  class="colorear2"><b>CC0</b></td></tr>                     
+                        </tfoot>
+                    </table>
+                </article>
+            </section>
+            <input type="radio" id="video" name="mostrarOcultar">
+            <section class="ocultar" role="Muestra la zona de Vídeo">
+                <article >
+                    <abbr title="Creado por Adrián Lozano Martínez"><video id="myVideo" controls poster="./ut_04_01_img/01_imagen_1.xxx_.jpeg" preload="metadata" role="reproduce vídeo">
+                        <source src="./ut_04_03_video/01_video.mpeg" type="video/mpeg"/ role="reproduce uno u otro vídeo">
+                        <source src="./ut_04_03_video/02_video.ogg" type="video/ogg"/ role="reproduce uno u otro vídeo">
+                        Your browser does not support the audio element.
+                    </video> </abbr>
+                    <br>
+                    <button onclick="SubirVolumen()" type="button" class="blue" role="botones de volumen"> <b>+</b> </button>
+                    <button onclick="BajarVolumen()" type="button" class="red" role="botones de volumen"> <b>-</b> </button>
+                    <div class="datos">
+                        <h2 class="solitario"><b><u>PONGA EL RATÓN ENCIMA PARA VER MEJOR</u></b></h2 class="solitario">
+                        <h2><b>nombre: <u>pexels-taryn-elliott-5309381</u> (<i>8038.4KB</i>)</b></h2>
+                        <h2><b>descargado: www.pexels.com/es-es/video/coches-carretera-calles-camara-lenta-5309381/</b></h2>
+                        <h2><b>licencia: CC0</b></h2>
+                        <h3><b>vídeos que se reproducen: 01_video.mpeg (16179.2KB)</b></h3>
+                        <h3><b>vídeos que se reproducen: 02_video.ogg (19968KB)</b></h3>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <!-- Pie -->
+            <h4 class="pie">&copy;Adrián Lozano Martínez - DAW - Desarrollo de Interfaz Web 2022</h4>
+        </footer>
+
+    </div>
+    
+    <!-- JavaScript Meter botones de volumen del vídeo -->
+    <script src="./ut_04_04_web/volumen.js"></script> 
+</body>
+</html>
